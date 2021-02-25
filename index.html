@@ -1,0 +1,32 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+html, body, form{
+  display: flex;
+  align-text: center;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type="text"]{
+  width: 512px;
+}
+</style>
+
+<form onsubmit="unblock()">
+  <h1>Website Unblocker</h1>
+  <input id="input" type="text">
+  <input type="submit"></input>
+  </input>
+</form>
+
+<script defer>
+   function unblock(){
+     let url = document.getElementById("input").value
+     console.log(url)
+     window.location.replace(url)
+     console.log(window.location)
+  }
+</script>
